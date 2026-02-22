@@ -1,0 +1,10 @@
+{
+  "name": "todo-app",
+  "private": true,
+  "workspaces": ["apps/*"],
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.2.0"
+  }
+}

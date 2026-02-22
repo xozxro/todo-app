@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-glass: rgba(255, 255, 255, 0.12);
+  --color-glass-strong: rgba(255, 255, 255, 0.18);
+  --color-glass-light: rgba(255, 255, 255, 0.06);
+  --color-glass-border: rgba(255, 255, 255, 0.18);
+  --color-glass-border-light: rgba(255, 255, 255, 0.10);
+  --color-accent: #6366f1;
+  --color-accent-hover: #818cf8;
+  --color-danger: #ef4444;
+  --color-danger-hover: #f87171;
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 25%, #16213e 50%, #0f0f1a 100%);
+  min-height: 100vh;
+  color: #e2e8f0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.glass-card {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.glass-input {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.75rem;
+  color: #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.glass-input::placeholder {
+  color: rgba(148, 163, 184, 0.6);
+}
+
+input[type="date"] {
+  color-scheme: dark;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.25); }
+
+.todo-item { transition: all 0.2s ease; }
+.todo-item:hover { transform: translateY(-1px); }
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+.priority-high-pulse { animation: pulse-glow 2s ease-in-out infinite; }

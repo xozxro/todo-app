@@ -1,0 +1,8 @@
+node_modules
+.env*.local
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+.next/
+postgresql:*
